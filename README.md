@@ -16,12 +16,13 @@ This project is a simple authentication example demonstrating login, signup, pas
 - **bcryptjs**: Password hashing
 - **Nodemailer**: For sending password reset emails
 - **Tailwind CSS**: Styling
+- **ShadCN Middleware**: UI components and middleware
 - **Zod**: Schema validation
 
 ## Installation
 
 ```sh
-git clone https://github.com/HassanZohaib121/auth-example.git
+git clone <repository-url>
 cd auth-example
 npm install
 npx prisma generate
@@ -38,7 +39,7 @@ NEXT_PUBLIC_BASE_URL="http://localhost:3000"
 EMAIL_SERVER_USER="example@email.com"
 EMAIL_SERVER_PASS="yourpassword"
 EMAIL_SERVER_HOST="smtp.example.com"
-EMAIL_SERVER_PORT=587 
+EMAIL_SERVER_PORT=587
 ```
 
 ## Prisma Setup
