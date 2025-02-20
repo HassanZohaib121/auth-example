@@ -16,7 +16,7 @@ export async function sendOtp({ email }: { email?: string }) {
     }
     if (email) {
       const OTP = generateRandomSixDigitNumber().toString();
-      console.log(OTP);
+      // console.log(OTP);
       const hashedOTP = await hash(OTP, 10);
       const resetData = await prisma.user.update({
         where: { email },
