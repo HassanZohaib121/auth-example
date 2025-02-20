@@ -21,7 +21,7 @@ This project is a simple authentication example demonstrating login, signup, pas
 ## Installation
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/HassanZohaib121/auth-example.git
 cd auth-example
 npm install
 npx prisma generate
