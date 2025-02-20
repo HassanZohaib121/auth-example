@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { CloudIcon } from "lucide-react";
+import { CloudIcon, UserPlus } from "lucide-react";
 import { useActionState } from "react";
 import { signup } from "@/actions/auth";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen flex-col items-center justify-center bg-background">
       <div className="mx-auto w-full max-w-md space-y-6">
         <div className="flex flex-col items-center space-y-2">
-          <CloudIcon className="h-10 w-10" />
+          <UserPlus className="h-10 w-10" />
           <h2 className="text-2xl font-bold">Welcome</h2>
           <p className="text-muted-foreground">
             Enter your name, email and password to sign up.
