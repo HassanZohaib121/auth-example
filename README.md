@@ -1,37 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Authentication Example with Prisma and MySQL
 
-## Getting Started
+This project is a simple authentication example demonstrating login, signup, password reset features, and session management using Prisma with a MySQL database. The application is built using only server actions.
 
-First, run the development server:
+## Features
+- User Registration (Signup)
+- User Login
+- Password Reset
+- Session Management with Cookies
+- Secure Authentication using Prisma
 
-```bash
+## Tech Stack
+- **Next.js 15.1.7**: React framework with server actions
+- **Prisma 6.4.0**: ORM for MySQL
+- **MySQL**: Relational database management system
+- **bcryptjs**: Password hashing
+- **Nodemailer**: For sending password reset emails
+- **Tailwind CSS**: Styling
+- **Zod**: Schema validation
+
+## Installation
+
+```sh
+git clone <repository-url>
+cd auth-example
+npm install
+npx prisma generate
+npx prisma migrate dev
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
+Create a `.env` file in the root directory and add the following:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
+NEXT_PUBLIC_BASE_URL="http://localhost:3000"
+EMAIL_SERVER_USER="example@email.com"
+EMAIL_SERVER_PASS="yourpassword"
+EMAIL_SERVER_HOST="smtp.example.com"
+EMAIL_SERVER_PORT=587 
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prisma Setup
+```sh
+npx prisma init
+npx prisma generate
+npx prisma migrate dev
+```
 
-## Learn More
+## Scripts
+- `npm run dev`: Start development server
+- `npm run build`: Build the project
+- `npm run start`: Start production server
+- `npm run lint`: Run linter
 
-To learn more about Next.js, take a look at the following resources:
+## License
+This project is licensed under the MIT License.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-"# auth-example" 
