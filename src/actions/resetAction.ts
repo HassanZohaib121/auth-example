@@ -16,7 +16,7 @@ export async function sendOtp({ email }: { email?: string }) {
     }
     if (email) {
       const OTP = generateRandomSixDigitNumber().toString();
-      console.log(OTP);
+      // console.log(OTP);
       const hashedOTP = await hash(OTP, 10);
       const resetData = await prisma.user.update({
         where: { email },
@@ -24,7 +24,7 @@ export async function sendOtp({ email }: { email?: string }) {
           forgetPassword: hashedOTP,
         },
       });
-      // Create a Nodemailer transporter
+      // Create a Nodemailer transporter`
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
         port: Number.parseInt(process.env.SMTP_PORT || "587"),
