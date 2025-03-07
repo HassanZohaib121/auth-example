@@ -1,0 +1,15 @@
+# mysql://USER:PASSWORD@HOST:PORT/DATABASE?connection_limit=1
+DATABASE_URL=""
+# use command openssl rand -base64 32
+SESSION_SECRET=
+
+
+# Email SMTP Setup
+SMTP_HOST=
+SMTP_PORT=
+SMTP_SECURE=  # true for port 465, false for other ports
+SMTP_USER=
+SMTP_PASSWORD=  # your-app-password if using gmail SMTP
+
+#Sender's Email
+SMTP_FROM=

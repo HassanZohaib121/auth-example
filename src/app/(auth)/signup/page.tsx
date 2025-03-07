@@ -3,7 +3,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { CloudIcon, UserPlus } from "lucide-react";
+import { UserPlus } from "lucide-react";
 import { useActionState } from "react";
 import { signup } from "@/actions/auth";
 import Link from "next/link";

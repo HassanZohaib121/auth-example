@@ -22,7 +22,7 @@ This project is a simple authentication example demonstrating login, signup, pas
 ## Installation
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/HassanZohaib121/auth-example.git
 cd auth-example
 npm install
 npx prisma generate
@@ -41,6 +41,8 @@ Create a `.env` file in the root directory and add the following:
 
 ```sh
 DATABASE_URL="mysql://USER:PASSWORD@HOST:PORT/DATABASE"
+# use command openssl rand -base64 32
+SESSION_SECRET="your-secret-key"
 NEXT_PUBLIC_BASE_URL="http://localhost:3000"
 EMAIL_SERVER_USER="example@email.com"
 EMAIL_SERVER_PASS="yourpassword"
