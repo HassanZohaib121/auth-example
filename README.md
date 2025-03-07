@@ -30,6 +30,12 @@ npx prisma migrate dev
 npm run dev
 ```
 
+## Install Using Template
+
+```sh
+npx create-next-app --example https://github.com/HassanZohaib121/auth-example <YOUR_APP_NAME>
+```
+
 ## Environment Variables
 Create a `.env` file in the root directory and add the following:
 
